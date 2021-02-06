@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #Write a Bash that display the FizzBuzz secuense
 NUMBER=1
-while ((NUMBER<100));
+while ((NUMBER<=100));
 do
 	if ((NUMBER%5==0 && NUMBER%3==0))
 	then
