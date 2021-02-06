@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Write a Bash that print the files inside the current folder since of delitator "."
+#Write a Bash that display the FizzBuzz secuense
 NUMBER=1
 while ((NUMBER<100));
 do
@@ -15,6 +15,5 @@ do
 	else
 		echo $NUMBER
 	fi
-	((++NUMBER))
-	
+	((++NUMBER))	
 done
