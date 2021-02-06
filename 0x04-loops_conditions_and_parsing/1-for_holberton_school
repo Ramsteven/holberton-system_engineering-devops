@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
-for ((C=0; C<=10; C++))
+for ((C=0; C<10; C++))
 do
 	echo "Holberton School"
 done
