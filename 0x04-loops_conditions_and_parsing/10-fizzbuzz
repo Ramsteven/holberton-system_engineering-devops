@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+#Write a Bash that print the files inside the current folder since of delitator "."
+NUMBER=1
+while ((NUMBER<100));
+do
+	if ((NUMBER%5==0 && NUMBER%3==0))
+	then
+		echo "FizzBuzz"
+	elif ((NUMBER%3==0))
+	then
+		echo "Fizz"
+	elif ((NUMBER%5==0))
+	then
+		echo "Buzz"
+	else
+		echo $NUMBER
+	fi
+	((++NUMBER))
+	
+done
