@@ -1,5 +1,5 @@
 #pupet to ssh_config
-file_line {  'Turn passwd auth':
+file_line {  'Turn off passwd auth':
   #ensure check if the file is present	
   ensure => 'present',
   path   => '/etc/ssh/ssh_config'
