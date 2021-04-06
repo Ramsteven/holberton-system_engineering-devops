@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This file create instance connection
+ssh -i ~/.ssh/holberton ubuntu@35.227.7.142
