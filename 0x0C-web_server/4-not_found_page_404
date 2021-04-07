@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# redirect with 301
-
-sudo apt-get update
-sudo apt-get -y install nginx
+#script than lanch nginx on port 80
+apt-get -y update
+apt-get install -y nginx
+sudo sed -i '0,/listen.*/s/listen.*/listen 80 default_server;/' /etc/nginx/sites-enabled/default
+echo "Holberton School for the win!" > /var/www/html/index.nginx-debian.html
+sudo sed -i " /server_name _;/a rewrite ^/redirect_me https://davix-photo-app.herokuapp.com/  permanent;" /etc/nginx/sites-available/default
 sudo echo "Ceci n'est pas une page" > /var/www/html/404_error.html
-sudo sed -i "52i \\\terror_page 404 \/404_error.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}" /etc/nginx/sites-available/default 
+sudo sed -i "52i \\\terror_page 404 \/404_error.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}" /etc/nginx/sites-available/default
 sudo service nginx restart
