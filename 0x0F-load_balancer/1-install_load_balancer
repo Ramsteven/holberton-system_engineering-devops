@@ -1,11 +1,13 @@
-!/usr/bin/env bash
-# Install an configure HAproxy on your load balancer
-sudo apt update
+#!/usr/bin/env bash
+# Haproxy  INSTALLATION AND CONFIGURATION
+sudo apt-get update
+
 sudo apt-get install -y software-properties-common
-sudo apt install -y haproxy
+sudo add-apt-repository -y ppa:vbernat/haproxy-1.7
+sudo apt-get update
+sudo apt-get install -y haproxy=1.7.\*
 
 echo -e "
-
 frontend http\n\
 \tbind *:80\n\
 \tmode http\n\
@@ -16,5 +18,5 @@ backend web-backend\n
 \tserver 730-web-02 35.196.231.114:80 check
 " | sudo tee -a /etc/haproxy/haproxy.cfg
 
-# Restart the service
-service haproxy restart
+sudo service haproxy start
+sudo service haproxy reload
