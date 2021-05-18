@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-# function request a api of reddit and receive the number of suscriptors
+"""function request a api"""
 import requests
 from sys import argv
 
 
 def top_ten(subreddit):
+    """function request a api with top 10 topics"""
     try:
         url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(argv[1])
         user_agent = "coco"
