@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-# function request a api of reddit and receive the number of suscriptors
+""" Functions return API """
 import requests
 from sys import argv
 
 
 def number_of_subscribers(subreddit):
+    """ number of suscribers """
     try:
         url = "https://www.reddit.com/r/{}/about.json".format(argv[1])
         user_agent = "coco"
